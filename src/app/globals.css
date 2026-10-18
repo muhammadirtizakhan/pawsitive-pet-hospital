@@ -4152,3 +4152,69 @@ body {
 .pd-variant-pills .pd-pill { flex: 0 1 auto; width: auto; max-width: 100%; padding: 8px 12px; font-size: 13px; overflow-wrap: anywhere; }
 
 .orders-status.paid { background: #e6f9ef; color: #137849; }
+/* Checkout mobile layout */
+@media (max-width: 768px) {
+  #page-checkout {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #page-checkout,
+  #page-checkout * {
+    box-sizing: border-box;
+  }
+
+  #page-checkout .checkout-hero {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #page-checkout .checkout-hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 32px 20px;
+  }
+
+  #page-checkout .checkout-section {
+    padding: 24px 16px;
+  }
+
+  #page-checkout .checkout-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+  }
+
+  #page-checkout .checkout-form,
+  #page-checkout .checkout-summary {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  #page-checkout .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #page-checkout .form-group,
+  #page-checkout input,
+  #page-checkout textarea,
+  #page-checkout .place-order-btn {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #page-checkout input,
+  #page-checkout textarea {
+    font-size: 16px;
+  }
+}
