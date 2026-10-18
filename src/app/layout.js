@@ -4,7 +4,7 @@ export const metadata = {
   icons: {
     icon: [
       {
-        url: 'https://res.cloudinary.com/djaonuvzx/image/upload/v1792351908/WhatsApp_Image_2026-10-19_at_12.29.45_AM_ih0qm8.jpg',
+        url: 'https://res.cloudinary.com/djaonuvzx/image/upload/v1792352038/WhatsApp_Image_2026-10-19_at_12.29.45_AM-removebg-preview_zaza5i.png',
         type: 'image/png',
         sizes: '64x64',
       },
