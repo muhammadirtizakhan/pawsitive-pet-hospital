@@ -1,8 +1,8 @@
 'use client';
 
-export default function CheckoutPage() {
+export default function CheckoutPage({ active = false }) {
   return (
-    <div className="page-content" id="page-checkout">
+    <div className={`page-content${active ? ' active' : ''}`} id="page-checkout">
       <section className="checkout-hero">
         <div className="checkout-hero-overlay"></div>
         <div className="checkout-hero-content">

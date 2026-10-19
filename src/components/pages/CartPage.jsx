@@ -1,8 +1,8 @@
 'use client';
 
-export default function CartPage() {
+export default function CartPage({ active = false }) {
   return (
-    <div className="page-content" id="page-cart">
+    <div className={`page-content${active ? ' active' : ''}`} id="page-cart">
       <section className="cart-hero">
         <div className="cart-hero-overlay"></div>
         <div className="cart-hero-content">

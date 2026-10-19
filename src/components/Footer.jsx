@@ -16,7 +16,7 @@ export default function Footer() {
           </div>
           <p>
             Your trusted veterinary partner in Karachi. We provide compassionate, professional care for your
-            beloved pets with state-of-the-art facilities and experienced veterinarians.
+            pets in Model Colony, Malir. Contact us for appointments, diagnostics, grooming and boarding.
           </p>
           <div className="footer-social">
             <a
@@ -49,15 +49,11 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <h4>Quick Links</h4>
+          <h2 className="seo-footer-heading">Quick Links</h2>
           <ul className="footer-links">
             <li>
               <a
-                href="#"
-                onClick={(e) => {
-                  window.showPage('home');
-                  e.preventDefault();
-                }}
+                href="/"
               >
                 <i className="fa-solid fa-chevron-right"></i>
                 {' Home'}
@@ -65,11 +61,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
-                onClick={(e) => {
-                  window.showPage('about');
-                  e.preventDefault();
-                }}
+                href="/#about-section"
               >
                 <i className="fa-solid fa-chevron-right"></i>
                 {' About Us'}
@@ -77,11 +69,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
-                onClick={(e) => {
-                  window.showPage('services');
-                  e.preventDefault();
-                }}
+                href="/services"
               >
                 <i className="fa-solid fa-chevron-right"></i>
                 {' Services'}
@@ -89,11 +77,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
-                onClick={(e) => {
-                  window.showPage('shop');
-                  e.preventDefault();
-                }}
+                href="/shop"
               >
                 <i className="fa-solid fa-chevron-right"></i>
                 {' Shop'}
@@ -101,11 +85,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
-                onClick={(e) => {
-                  window.showPage('contact');
-                  e.preventDefault();
-                }}
+                href="/#contact-section"
               >
                 <i className="fa-solid fa-chevron-right"></i>
                 {' Contact'}
@@ -114,27 +94,19 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h4>Our Services</h4>
+          <h2 className="seo-footer-heading">Our Services</h2>
           <ul className="footer-links">
             <li>
               <a
-                href="#"
-                onClick={(e) => {
-                  window.showPage('services');
-                  e.preventDefault();
-                }}
+                href="/services/lab-tests-xray"
               >
                 <i className="fa-solid fa-chevron-right"></i>
-                {' Digital X-Ray'}
+                {' X-Ray Imaging'}
               </a>
             </li>
             <li>
               <a
-                href="#"
-                onClick={(e) => {
-                  window.showPage('services');
-                  e.preventDefault();
-                }}
+                href="/services/lab-tests-xray"
               >
                 <i className="fa-solid fa-chevron-right"></i>
                 {' Lab Tests'}
@@ -142,11 +114,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
-                onClick={(e) => {
-                  window.showPage('services');
-                  e.preventDefault();
-                }}
+                href="/services/cat-grooming"
               >
                 <i className="fa-solid fa-chevron-right"></i>
                 {' Pet Grooming'}
@@ -154,32 +122,24 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
-                onClick={(e) => {
-                  window.showPage('services');
-                  e.preventDefault();
-                }}
+                href="/services"
               >
                 <i className="fa-solid fa-chevron-right"></i>
-                {' Dental Care'}
+                {' Treatment'}
               </a>
             </li>
             <li>
               <a
-                href="#"
-                onClick={(e) => {
-                  window.showPage('services');
-                  e.preventDefault();
-                }}
+                href="/services/cat-boarding"
               >
                 <i className="fa-solid fa-chevron-right"></i>
-                {' Emergency Care'}
+                {' Boarding'}
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h4>Contact Us</h4>
+          <h2 className="seo-footer-heading">Contact Us</h2>
           <ul className="footer-contact">
             <li>
               <i className="fa-solid fa-location-dot"></i>
@@ -202,7 +162,7 @@ export default function Footer() {
             </li>
             <li>
               <i className="fa-solid fa-clock"></i>
-              <span>12:00 AM - 12:00 PM</span>
+              <span>Call to confirm current opening hours</span>
             </li>
           </ul>
         </div>
@@ -216,7 +176,7 @@ export default function Footer() {
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
           <a href="#">Cookie Policy</a>
-          <a href="#">Sitemap</a>
+          <a href="/sitemap.xml">Sitemap</a>
         </div>
       </div>
     </footer>

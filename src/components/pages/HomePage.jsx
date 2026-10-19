@@ -1,6 +1,8 @@
 'use client';
 
-export default function HomePage() {
+import { HOME_FAQS } from '@/lib/seo';
+
+export default function HomePage({ active = false }) {
   const avatarStyle = {
     width: '48px',
     height: '48px',
@@ -15,7 +17,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="page-content active" id="page-home">
+    <div className={`page-content${active ? ' active' : ''}`} id="page-home">
       <section className="hero" id="home">
         <div className="hero-overlay"></div>
 
@@ -26,16 +28,16 @@ export default function HomePage() {
           </div>
 
           <h1>
-            {'Your Trusted Pet Partner in Karachi – '}
+            {'Veterinary Care in Model Colony, Karachi'}
             <br />
             <span>Pets Doctor - Pawsitive Clinic</span>
           </h1>
 
           <p>
-            From routine checkups to advanced surgeries, our compassionate
-            team provides complete veterinary care under one roof. As a
-            leading pet hospital and clinic in Karachi, we're dedicated to
-            keeping your furry family members healthy, happy, and thriving.
+            Pawsitive Clinic provides veterinary treatment, surgery consultations,
+            laboratory tests and X-ray imaging in Model Colony, Malir, Karachi.
+            Contact Maaz for cat grooming, boarding and appointments, or browse
+            pet food and accessories in our online shop.
           </p>
 
           <div className="hero-buttons">
@@ -58,13 +60,13 @@ export default function HomePage() {
 
           <div className="hero-stats">
             <div className="stat">
-              <h3>24/7</h3>
-              <p>Pet Care Support</p>
+              <h3>Model Colony</h3>
+              <p>Malir, Karachi</p>
             </div>
 
             <div className="stat">
-              <h3>All Breeds</h3>
-              <p>Welcomed</p>
+              <h3>Clinic & Shop</h3>
+              <p>Care and Pet Essentials</p>
             </div>
 
             <div className="stat">
@@ -81,16 +83,15 @@ export default function HomePage() {
             Trusted Veterinary Care in Karachi
           </div>
 
-          <h1>
+          <h2>
             {'Expert Care For Your '}
             <span>Beloved Pets</span>
-          </h1>
+          </h2>
 
           <p>
-            At Pawsitive Clinic, we provide professional veterinary
-            services, preventive care, diagnostics, and advanced
-            treatments to ensure your pets stay healthy, active, and
-            happy throughout every stage of life.
+            Visit our veterinary clinic near Malir Cantt Check Post No 2 for
+            an examination and advice tailored to your pet. Discuss treatment,
+            blood tests, X-rays and follow-up care directly with the veterinarian.
           </p>
 
           <div className="hero-buttons">
@@ -110,7 +111,7 @@ export default function HomePage() {
         <div className="hero-image-2">
           <img
             src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=80"
-            alt="Pet Doctor"
+            loading="lazy" decoding="async" width="1200" height="800" alt="Dogs outdoors"
           />
         </div>
       </section>
@@ -133,10 +134,7 @@ export default function HomePage() {
         </div>
 
         <div className="categories">
-          <div
-            className="store-card"
-            onClick={() => window.showPage('shop')}
-          >
+          <a className="store-card" href="/shop/cat-food">
             <div className="circle">
               <img
                 loading="lazy"
@@ -148,12 +146,9 @@ export default function HomePage() {
 
             <h3>Cat Food</h3>
             <p>Nutritious meals designed for cats of all ages.</p>
-          </div>
+          </a>
 
-          <div
-            className="store-card"
-            onClick={() => window.showPage('shop')}
-          >
+          <a className="store-card" href="/shop/dog-food">
             <div className="circle">
               <img
                 loading="lazy"
@@ -165,12 +160,9 @@ export default function HomePage() {
 
             <h3>Dog Food</h3>
             <p>High-quality nutrition for active, healthy dogs.</p>
-          </div>
+          </a>
 
-          <div
-            className="store-card"
-            onClick={() => window.showPage('shop')}
-          >
+          <a className="store-card" href="/shop/pet-accessories">
             <div className="circle">
               <img
                 loading="lazy"
@@ -182,12 +174,9 @@ export default function HomePage() {
 
             <h3>Pet Accessories</h3>
             <p>{'Beds, toys, bowls, collars & daily essentials.'}</p>
-          </div>
+          </a>
 
-          <div
-            className="store-card"
-            onClick={() => window.showPage('shop')}
-          >
+          <a className="store-card" href="/shop/other-animals">
             <div className="circle">
               <img
                 loading="lazy"
@@ -199,7 +188,7 @@ export default function HomePage() {
 
             <h3>Other Animals</h3>
             <p>{'Specialty food & care for birds, rabbits & more.'}</p>
-          </div>
+          </a>
         </div>
 
         <div className="shop-btn">
@@ -213,6 +202,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="seo-content"><h2>Pet Care in Model Colony, Malir</h2><p>Explore the services you need and contact the clinic to confirm appointments and charges.</p><nav className="seo-link-list" aria-label="Explore veterinary services"><a href="/services">Veterinary treatment and surgery consultations</a><a href="/services/cat-grooming">Cat grooming in Karachi</a><a href="/services/cat-boarding">Cat boarding in Karachi</a><a href="/services/lab-tests-xray">Blood tests and pet X-ray</a></nav></section>
       <section className="testimonials">
         <div className="testimonial-header">
           <div className="testimonial-tag">
@@ -234,7 +224,7 @@ export default function HomePage() {
             <span>Testimonials</span>
           </div>
 
-          <h1>What Pet Parents Say About Us</h1>
+          <h2>What Pet Parents Say About Us</h2>
 
           <p className="testimonial-sub">
             Hear from our happy clients about their experience at
@@ -340,7 +330,7 @@ export default function HomePage() {
               <span>FAQ's</span>
             </div>{' '}
 
-            <h1>Frequently Asked Questions</h1>
+            <h2>Frequently Asked Questions</h2>
 
             <p className="faq-sub">
               Find answers to the most common questions about our
@@ -348,7 +338,7 @@ export default function HomePage() {
               Can't find what you're looking for? Feel free to contact us!
             </p>
 
-            <div id="faqContainer"></div>
+            <div id="faqContainer">{HOME_FAQS.map(([question, answer]) => <details className="seo-faq" key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div>
           </div>
         </div>
       </section>
@@ -383,16 +373,18 @@ export default function HomePage() {
             <span>Find Us</span>
           </div>{' '}
 
-          <h1>Visit Our Clinic</h1>
+          <h2>Visit Our Clinic</h2>
 
           <p className="map-sub">
-            We're conveniently located in Karachi. Come visit us for all
-            your pet care needs.
+            Find us at 36/1-1 Sheet 19, Model Colony Block 19, near Malir Cantt
+            Check Post No 2, Karachi 75080. Call +92 334 3601699 for directions
+            and current opening hours.
           </p>
         </div>
 
         <div className="map-container">
           <iframe
+            title="Pawsitive Clinic location in Model Colony, Karachi"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.2!2d67.1918174!3d24.912041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33765a6802da1%3A0xb7eeee2f01290dce!2sPets+doctor-Pawsitive+clinic!5e0!3m2!1sen!2spk!4v1700000000000"
             width="100%"
             height="450"

@@ -11,6 +11,12 @@ let productsLoaded = false;
 let selectedShopCategoryIds = new Set();
 let shopMaxPrice = null;
 let shopSort = 'featured';
+let initialCategoryApplied = false;
+const initialScreen = document.getElementById('main-content');
+const publicPagePaths = { home: '/', services: '/services', shop: '/shop', guide: '/guide' };
+function escapeProductText(value) {
+    return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
 
 async function loadProductsFromDB(providedData) {
     try {
@@ -93,6 +99,12 @@ async function loadCategoriesFromDB(providedData) {
         const json = providedData ? { ok: true, data: providedData } : await (await fetch(API + '/api/categories')).json();
         if (!json.ok) throw new Error(json.error);
         CATEGORIES = json.data || [];
+        if (!initialCategoryApplied && initialScreen?.dataset.category) {
+            const matches = JSON.parse(initialScreen.dataset.categoryMatches || '[]');
+            CATEGORIES.filter(c => matches.includes(String(c.name).trim().toLowerCase().replace(/[_-]+/g, ' ').replace(/\s+/g, ' ')))
+                .forEach(c => selectedShopCategoryIds.add(String(c.id)));
+            initialCategoryApplied = true;
+        }
         renderShopFilters();
         console.log(`✅ ${CATEGORIES.length} categories loaded`);
     } catch (err) {
@@ -415,6 +427,17 @@ const menuBtn = document.getElementById('menuBtn');
 const allPages = document.querySelectorAll('.page-content');
 
 function showPage(pageId) {
+    const target = publicPagePaths[pageId];
+    // Public pages use document navigation so their server metadata and content
+    // always match their URL. Private checkout screens retain the existing flow.
+    if (target && (window.location.pathname !== target || (pageId === 'shop' && initialScreen?.dataset.category))) {
+        window.location.assign(target);
+        return;
+    }
+    if (['about', 'contact'].includes(pageId) && window.location.pathname !== '/') {
+        window.location.assign('/#' + (pageId === 'about' ? 'about-section' : 'contact-section'));
+        return;
+    }
     if (pageId === 'orders' && !currentUser) {
         openAuth();
         return;
@@ -485,6 +508,8 @@ function showPage(pageId) {
 
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function(e) {
+        // Real href links support crawlers, new tabs and browser back/forward.
+        if (this.getAttribute('href') !== '#') return;
         e.preventDefault();
         showPage(this.dataset.page);
     });
@@ -884,15 +909,13 @@ function updatePassword() {
 // FAQ ACCORDION
 // ============================================================
 const faqs = [
-    { question: "What services does Pawsitive Clinic offer?", answer: "We offer a wide range of veterinary services including routine checkups, vaccinations, digital X-ray, ultrasound, dental care, grooming, emergency care, and advanced diagnostic lab tests." },
-    { question: "Do I need to book an appointment?", answer: "Yes, we recommend booking an appointment to ensure timely service. However, we also welcome walk-ins for emergencies and routine visits when availability allows." },
-    { question: "What are your operating hours?", answer: "We are open Monday to Saturday from 9:00 AM to 9:00 PM. Emergency services are available 24/7 for critical cases." },
-    { question: "Do you treat all types of pets?", answer: "Yes! We treat cats, dogs, rabbits, birds, and other small animals." },
-    { question: "How can I book a grooming session?", answer: "You can book an appointment via WhatsApp by messaging us at +92 334 3601699." }
+    { question: 'Where is Pawsitive Clinic?', answer: 'Model Colony Block 19, near Malir Cantt Check Post No 2, Karachi. Call +92 334 3601699 to confirm current hours and appointments.' },
+    { question: 'Which services can I ask about?', answer: 'Veterinary treatment, surgery consultations, laboratory testing, X-ray, cat grooming and boarding. Confirm availability and charges with the clinic.' },
+    { question: 'When should I pay for a shop order?', answer: 'Wait for availability confirmation, then follow the payment instructions. Send payment proof and the order ID to Maaz. Read the Guide for full steps.' }
 ];
 
 const faqContainer = document.getElementById('faqContainer');
-if (faqContainer) {
+if (faqContainer && !faqContainer.children.length) {
     faqs.forEach(function(faq, index) {
         const item = document.createElement('div');
         item.className = 'faq-item';
@@ -933,29 +956,28 @@ if (faqContainer) {
 // ============================================================
 function renderProductCard(p) {
     const isWishlisted = wishlist.has(p.id);
+    const id = encodeURIComponent(p.id);
+    const name = escapeProductText(p.name);
+    const href = '/products/' + id;
     const priceLabel = p.variantType ? 'Starting from' : 'Price';
     return `
-        <div class="product-card-v2" onclick="openProductDetail('${p.id}')">
+        <article class="product-card-v2 seo-product-card">
             <div class="product-card-v2-img">
-                ${p.tag ? `<span class="product-card-v2-tag">${p.tag}</span>` : ''}
-                <img loading="lazy" decoding="async" src="${p.images[0]}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/600x600?text=No+Image'">
-                <button class="wishlist-btn ${isWishlisted ? 'active' : ''}" onclick="event.stopPropagation(); toggleWishlist('${p.id}')" aria-label="Add to wishlist">
+                ${p.tag ? `<span class="product-card-v2-tag">${escapeProductText(p.tag)}</span>` : ''}
+                <a href="${href}"><img loading="lazy" decoding="async" src="${escapeProductText(p.images[0])}" alt="${name}"></a>
+                <button class="wishlist-btn ${isWishlisted ? 'active' : ''}" onclick="toggleWishlist('${id}')" aria-label="${isWishlisted ? 'Remove from' : 'Add to'} wishlist">
                     <i class="fa-${isWishlisted ? 'solid' : 'regular'} fa-heart"></i>
                 </button>
             </div>
             <div class="product-card-v2-body">
-                ${p.category ? `<div class="product-card-v2-category">${p.category}</div>` : ''}
-                <h3>${p.name}</h3>
+                ${p.category ? `<div class="product-card-v2-category">${escapeProductText(p.category)}</div>` : ''}
+                <h3><a href="${href}">${name}</a></h3>
                 <div class="product-card-v2-footer">
-                    <div class="product-card-v2-price-wrap">
-                        <span class="product-card-v2-price-label">${priceLabel}</span>
-                        <span class="product-card-v2-price">Rs ${p.price.toFixed(2)}</span>
-                    </div>
-                    <div class="product-card-v2-view"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="product-card-v2-price-wrap"><span class="product-card-v2-price-label">${priceLabel}</span><span class="product-card-v2-price">Rs ${p.price.toFixed(2)}</span></div>
+                    <a class="product-card-v2-view" href="${href}" aria-label="View ${name}"><i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-        </div>
-    `;
+        </article>`;
 }
 
 function renderShopProducts() {
@@ -966,14 +988,14 @@ function renderShopProducts() {
         container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:#6B7280;">
             <i class="fa-solid fa-box-open" style="font-size:48px;color:#FF7A00;margin-bottom:16px;display:block;"></i>
             <h3 style="font-size:20px;color:#1a1a2e;margin-bottom:8px;">No products available</h3>
-            <p>Please add products from the admin dashboard.</p>
+            <p>Contact the clinic for product availability.</p>
         </div>`;
         if (countLabel) countLabel.textContent = '0 products';
         return;
     }
 
     let filteredProducts = PRODUCTS.filter(product => {
-        const categoryMatch = !selectedShopCategoryIds.size || selectedShopCategoryIds.has(product.categoryId);
+        const categoryMatch = initialScreen?.dataset.category && !selectedShopCategoryIds.size ? false : (!selectedShopCategoryIds.size || selectedShopCategoryIds.has(product.categoryId));
         const priceMatch = shopMaxPrice === null || Number(product.price) <= shopMaxPrice;
         return categoryMatch && priceMatch;
     });
@@ -1065,6 +1087,11 @@ function renderWishlistPage() {
 // PRODUCT DETAIL PAGE
 // ============================================================
 function openProductDetail(id) {
+    const path = '/products/' + encodeURIComponent(id);
+    if (window.location.pathname !== path) {
+        window.location.assign(path);
+        return;
+    }
     const p = PRODUCTS.find(x => x.id === id);
     if (!p) return;
     currentProduct = p;
@@ -1092,6 +1119,7 @@ function renderProductDetail() {
     const p = currentProduct;
     if (!p) return;
     document.getElementById('pdImage').src = p.images[selectedImageIndex] || selectedVariant?.image_url || p.mainImage;
+    document.getElementById('pdImage').alt = p.name;
     document.getElementById('pdTag').textContent = p.tag || '';
     document.getElementById('pdName').textContent = p.name;
     document.getElementById('pdCategory').textContent = p.category;
@@ -1705,7 +1733,14 @@ function moveSurgeryCards(direction) {
 
     await loadCategoriesFromDB();
     await loadProductsFromDB();
+    if (initialScreen?.dataset.productId && productsLoaded) {
+        openProductDetail(initialScreen.dataset.productId);
+    }
     if (currentUser) await syncUserSavedData();
+    if (initialScreen?.dataset.initialPage === 'orders' && currentUser) loadMyOrders();
+    if (window.location.hash && document.getElementById(window.location.hash.slice(1))) {
+        document.getElementById(window.location.hash.slice(1)).scrollIntoView();
+    }
     updateCartBadge();
     updateWishlistBadge();
     updateCartUI();

@@ -1,6 +1,6 @@
 'use client';
 
-export default function Navbar() {
+export default function Navbar({ initialPage = 'home' }) {
   return (
     <nav className="navbar">
       <div className="logo">
@@ -12,22 +12,22 @@ export default function Navbar() {
         </div>
       </div>
       <div className="nav-links" id="navLinks">
-        <a href="#" data-page="home" className="active">
+        <a href="/" data-page="home" className={initialPage === 'home' ? 'active' : ''}>
           Home
         </a>{' '}
-        <a href="#" data-page="about">
+        <a href="/#about-section" data-page="about">
           About
         </a>{' '}
-        <a href="#" data-page="services">
+        <a href="/services" data-page="services" className={['services', 'service-detail'].includes(initialPage) ? 'active' : ''}>
           Services
         </a>{' '}
-       <a href="#" data-page="shop">
+       <a href="/shop" data-page="shop" className={initialPage === 'shop' ? 'active' : ''}>
   Shop
 </a>{' '}
-<a href="#" data-page="guide">
+<a href="/guide" data-page="guide" className={initialPage === 'guide' ? 'active' : ''}>
   Guide
 </a>{' '}
-        <a href="#" data-page="contact">
+        <a href="/#contact-section" data-page="contact">
           Contact
         </a>
       </div>

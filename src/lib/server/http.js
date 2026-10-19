@@ -24,10 +24,15 @@ export async function readBody(request) {
 }
 export const badBody = () => fail(400, 'Invalid request body');
 
-// Public address of the site (used for SEO links) - SITE_URL if set, otherwise the request's own address.
-export function siteUrlFrom(getHeader) {
-  if (process.env.SITE_URL) return process.env.SITE_URL.replace(/\/$/, '');
-  const host = getHeader('x-forwarded-host') || getHeader('host') || 'localhost:3000';
-  const proto = (getHeader('x-forwarded-proto') || 'http').split(',')[0].trim();
-  return `${proto}://${host}`.replace(/\/$/, '');
+// One canonical public origin. Set SITE_URL in Vercel Production when the domain changes.
+// Never derive canonical URLs from arbitrary incoming Host headers.
+export function siteUrlFrom() {
+  const configured = process.env.SITE_URL || 'https://pawsitive-pet-hospital.vercel.app';
+  try {
+    const url = new URL(configured);
+    if (!['https:', 'http:'].includes(url.protocol) || url.username || url.password) throw new Error();
+    return url.origin;
+  } catch {
+    throw new Error('SITE_URL must be an absolute http(s) website URL');
+  }
 }

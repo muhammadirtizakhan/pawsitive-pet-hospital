@@ -1,8 +1,8 @@
 'use client';
 
-export default function OrdersPage() {
+export default function OrdersPage({ active = false }) {
   return (
-    <div className="page-content" id="page-orders">
+    <div className={`page-content${active ? ' active' : ''}`} id="page-orders">
       <section className="orders-section">
         <div className="orders-header">
           <div>

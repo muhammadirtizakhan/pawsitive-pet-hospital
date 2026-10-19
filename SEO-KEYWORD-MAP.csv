@@ -1,0 +1,33 @@
+﻿Target URL path,Keyword / topic,Role,Evidence source,Usage / qualification,Verified monthly search volume
+/,vet clinic karachi,Primary,vet clinic karachi.csv,Homepage title/introduction,Not supplied
+/,vet clinic in karachi,Supporting,vet clinic karachi.csv,Same homepage; no duplicate doorway page,Not supplied
+/,pet clinic in karachi,Supporting,vet clinic karachi.csv,Clinic introduction,Not supplied
+/,animal clinic in karachi,Supporting,vet clinic karachi.csv,Use naturally where appropriate,Not supplied
+/,vet clinic Model Colony Karachi,Local modifier,Proposed from confirmed address,Title/H1/location copy; volume unverified,Not supplied
+/,pet clinic Malir Karachi,Local modifier,Proposed from confirmed address,Location copy; volume unverified,Not supplied
+/services,cat vet karachi,Supporting,vet clinic karachi.csv,Treatment introduction,Not supplied
+/services/lab-tests-xray,cat xray karachi,Primary,vet clinic karachi.csv,X-ray service heading/description,Not supplied
+/services/lab-tests-xray,veterinary blood tests Karachi,Supporting,Proposed from confirmed services,CBC/haemoglobin/chemistry description,Not supplied
+/shop/cat-food,cat food karachi,Primary,cat food karachi.csv,Category title/H1/introduction,Not supplied
+/shop/cat-food,buy cat food karachi,Supporting,cat food karachi.csv,Buying intent,Not supplied
+/shop/cat-food,cat food karachi online,Supporting,cat food karachi.csv,Online catalogue copy,Not supplied
+/shop/cat-food,online cat food karachi,Supporting,cat food karachi.csv,Same category; not a separate page,Not supplied
+/shop/cat-food,cat food price in karachi,Supporting,cat food karachi.csv,Current prices from DB,Not supplied
+/shop/cat-food,cat food shop in karachi,Supporting,cat food karachi.csv,Physical clinic/shop context,Not supplied
+/products/{uuid},josera cat food karachi,Conditional brand,cat food karachi.csv,Only actual matching active products,Not supplied
+/products/{uuid},pro choice cat food karachi,Conditional brand,cat food karachi.csv,Only actual matching active products,Not supplied
+/products/{uuid},groove cat food karachi,Conditional brand,cat food karachi.csv,Only actual matching active products,Not supplied
+/products/{uuid},{product name} {weight} {flavour} price,Dynamic product intent,Actual database catalogue,No hardcoded price or stock claim,Not supplied
+/services/cat-grooming,cat grooming karachi,Primary,cat grooming karachi.csv,Title/H1,Not supplied
+/services/cat-grooming,pet grooming in karachi,Supporting,cat grooming karachi.csv,Explain confirmed cat grooming,Not supplied
+/services/cat-grooming,cat grooming price in karachi,Question intent,cat grooming karachi.csv,Ask clinic for verified quote,Not supplied
+/services/cat-grooming,how does cat grooming work,Question intent,cat grooming karachi.csv,Process explanation,Not supplied
+/services/cat-grooming,how long does a cat grooming take,Question intent,cat grooming karachi.csv,No invented duration,Not supplied
+/services/cat-boarding,cat boarding karachi,Primary,cat boarding karachi.csv,Title/H1,Not supplied
+/services/cat-boarding,pet boarding in karachi,Supporting,cat boarding karachi.csv,Boarding introduction,Not supplied
+/services/cat-boarding,what is cat boarding,Question intent,cat boarding karachi.csv,Explain temporary stay,Not supplied
+/services/cat-boarding,how does cat boarding work,Question intent,cat boarding karachi.csv,Booking process,Not supplied
+/services/cat-boarding,pet boarding karachi rates,Question intent,cat boarding karachi.csv,Confirm quote; no invented rates,Not supplied
+/services/cat-boarding,where can i board my cat for a week,Question intent,cat boarding karachi.csv,Confirm stay dates/suitability,Not supplied
+/shop/dog-food,dog food Karachi,Category label,Proposed from existing category,Current active dog food only,Not supplied
+/shop/pet-accessories,pet accessories Karachi,Category label,Proposed from existing category,Current active accessories only,Not supplied

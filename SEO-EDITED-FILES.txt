@@ -1,0 +1,29 @@
+Pawsitive website SEO patch: 20 edited + 4 new runtime files
+
+EDIT  next.config.mjs
+EDIT  public/js/script.js
+EDIT  src/app/[[...slug]]/page.js
+EDIT  src/app/globals.css
+NEW   src/app/not-found.js
+EDIT  src/app/robots.txt/route.js
+EDIT  src/app/sitemap.xml/route.js
+EDIT  src/components/Footer.jsx
+EDIT  src/components/Navbar.jsx
+EDIT  src/components/SiteMarkup.jsx
+EDIT  src/components/pages/CartPage.jsx
+EDIT  src/components/pages/CheckoutPage.jsx
+EDIT  src/components/pages/GuidePage.jsx
+EDIT  src/components/pages/HomePage.jsx
+EDIT  src/components/pages/OrdersPage.jsx
+EDIT  src/components/pages/PaymentPage.jsx
+EDIT  src/components/pages/ProductDetailPage.jsx
+EDIT  src/components/pages/ServicesPage.jsx
+EDIT  src/components/pages/ShopPage.jsx
+EDIT  src/components/pages/WishlistPage.jsx
+NEW   src/components/seo/ServiceDetailPage.jsx
+NEW   src/lib/seo.js
+EDIT  src/lib/server/http.js
+NEW   src/lib/server/seoCatalog.js
+
+Documentation included: SEO-APPLY-GUIDE.md, SEO-KEYWORD-MAP.csv, SEO-EDITED-FILES.txt
+No existing source file needs deletion. Merge folders and overwrite matching files.

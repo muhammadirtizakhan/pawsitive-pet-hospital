@@ -1,8 +1,8 @@
 'use client';
 
-export default function ServicesPage() {
+export default function ServicesPage({ active = false }) {
   return (
-    <div className="page-content" id="page-services">
+    <div className={`page-content${active ? ' active' : ''}`} id="page-services">
       <section className="services-hero">
         <div className="services-hero-overlay"></div>
         <div className="services-hero-content">
@@ -11,13 +11,13 @@ export default function ServicesPage() {
             {' Our Services'}
           </div>
           <h1>
-            {'Comprehensive '}
-            <span>Veterinary</span>
-            {' Care'}
+            {'Veterinary Services in '}
+            <span>Karachi</span>
+            {''}
           </h1>
           <p>
-            From diagnostics and preventive care to advanced treatments, our experienced veterinary team
-            provides trusted healthcare solutions tailored to your pet's well-being.
+            Visit Pawsitive Clinic in Model Colony, Malir, for treatment, surgery consultations,
+            blood tests and X-ray imaging. Ask Maaz about cat grooming, boarding and appointment availability.
           </p>
           <div className="hero-buttons">
             <button className="hero-btn-primary" onClick={() => window.openWhatsAppContact()}>
@@ -31,6 +31,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      <nav className="seo-content seo-link-list" aria-label="Service details"><a href="/services/cat-grooming">Cat grooming</a><a href="/services/cat-boarding">Cat boarding</a><a href="/services/lab-tests-xray">Laboratory tests and X-ray</a></nav>
       <section className="service-showcase surgery-showcase">
         <div className="service-showcase-heading">
           <span>Specialist Care</span> <h2>Advanced Surgical Services</h2>
@@ -232,8 +233,8 @@ export default function ServicesPage() {
             }}
           >
             <div>
-              <h3>MOBILE X RAY</h3>
-              <p>You access X-ray service at your location, without stressful travel for your pet.</p>
+              <h3>Pet X-Ray Imaging</h3>
+              <p>Ask the veterinarian about X-ray imaging at the clinic and any preparation required for your pet.</p>
             </div>
           </article>
         </div>
@@ -245,10 +246,10 @@ export default function ServicesPage() {
         </div>
         <div className="care-row">
           <div className="care-copy">
-            <h3>GROOMING</h3>
+            <h3>Cat Grooming in Karachi</h3>
             <p>
-              You see your pet look fresh after a full care session, with safe products, coat care, ear
-              cleaning, and nail trimming that keep them comfortable and healthy.
+              Ask about cat bathing, coat brushing, nail trimming and teeth brushing. Share your cat’s
+              coat condition and health needs before booking, and confirm the session details and charges.
             </p>
           </div>
           <img
@@ -266,10 +267,10 @@ export default function ServicesPage() {
             alt="Dogs enjoying supervised day care"
           />
           <div className="care-copy">
-            <h3>DAY CARE</h3>
+            <h3>Cat Boarding in Karachi</h3>
             <p>
-              You leave your pet in a safe and friendly space during the day, with constant supervision, fun
-              activities, and a clean environment that supports confident behavior.
+              Contact the clinic to discuss your cat’s boarding dates, usual food and care needs.
+              Confirm space, preparation requirements, charges and collection times before booking.
             </p>
           </div>
         </div>

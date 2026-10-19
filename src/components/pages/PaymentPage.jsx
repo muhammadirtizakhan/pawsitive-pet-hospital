@@ -1,6 +1,6 @@
 'use client';
 
-export default function PaymentPage() {
+export default function PaymentPage({ active = false }) {
   const contactStyle = {
     color: '#FF7A00',
     fontWeight: 600,
@@ -26,7 +26,7 @@ export default function PaymentPage() {
   }
 
   return (
-    <div className="page-content" id="page-payment">
+    <div className={`page-content${active ? ' active' : ''}`} id="page-payment">
       <section className="payment-hero">
         <div className="payment-hero-overlay"></div>
 

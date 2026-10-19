@@ -119,7 +119,7 @@ const faqs = [
   }
 ];
 
-export default function GuidePage() {
+export default function GuidePage({ active = false }) {
   const [playVideo, setPlayVideo] = useState(false);
 
   function navigate(page) {
@@ -142,7 +142,7 @@ export default function GuidePage() {
   }
 
   return (
-    <div className="page-content" id="page-guide">
+    <div className={`page-content${active ? ' active' : ''}`} id="page-guide">
       <div className="pg-guide">
         <section className="pg-hero">
           <div className="pg-wrap">
@@ -207,7 +207,7 @@ export default function GuidePage() {
           </div>
         </section>
 
-        <main className="pg-wrap">
+        <div className="pg-wrap">
           <section className="pg-section" id="guide-video">
             <div className="pg-video-layout">
               <div>
@@ -484,7 +484,7 @@ export default function GuidePage() {
               </button>
             </div>
           </section>
-        </main>
+        </div>
       </div>
 
       <style jsx>{`

@@ -1,6 +1,6 @@
-export default function WishlistPage() {
+export default function WishlistPage({ active = false }) {
   return (
-    <div className="page-content" id="page-wishlist">
+    <div className={`page-content${active ? ' active' : ''}`} id="page-wishlist">
       <section className="wishlist-section">
         <div className="cart-page-header">
           <h2>My Wishlist</h2>
