@@ -202,7 +202,7 @@ export default function HomePage({ active = false }) {
         </div>
       </section>
 
-      <section className="seo-content"><h2>Pet Care in Model Colony, Malir</h2><p>Explore the services you need and contact the clinic to confirm appointments and charges.</p><nav className="seo-link-list" aria-label="Explore veterinary services"><a href="/services">Veterinary treatment and surgery consultations</a><a href="/services/cat-grooming">Cat grooming in Karachi</a><a href="/services/cat-boarding">Cat boarding in Karachi</a><a href="/services/lab-tests-xray">Blood tests and pet X-ray</a></nav></section>
+
       <section className="testimonials">
         <div className="testimonial-header">
           <div className="testimonial-tag">
