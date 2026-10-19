@@ -825,6 +825,7 @@ body {
 }
 .hero-section-2 .hero-image-2 img {
     width: 100%;
+    height: auto;
     max-width: 600px;
     border-radius: 30px;
     object-fit: cover;
@@ -1531,6 +1532,7 @@ body {
     flex-wrap: wrap;
     gap: 12px;
 }
+.shop-products-grid .products-header h1,
 .shop-products-grid .products-header h2 {
     font-size: 22px;
     font-weight: 700;
@@ -4250,3 +4252,5 @@ body {
 a.store-card { color: inherit; text-decoration: none; }
 .seo-not-found { min-height: 70vh; padding-top: 100px; }
 @media (max-width: 768px) { .seo-content { padding: 32px 20px; } .seo-service-grid { grid-template-columns: 1fr; } }
+/* Compact category copy stays inside the existing product layout. */
+.shop-category-description { margin: 0 0 24px; color: #6B7280; line-height: 1.7; }
