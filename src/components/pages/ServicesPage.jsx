@@ -31,7 +31,6 @@ export default function ServicesPage({ active = false }) {
           </div>
         </div>
       </section>
-      <nav className="seo-content seo-link-list" aria-label="Service details"><a href="/services/cat-grooming">Cat grooming</a><a href="/services/cat-boarding">Cat boarding</a><a href="/services/lab-tests-xray">Laboratory tests and X-ray</a></nav>
       <section className="service-showcase surgery-showcase">
         <div className="service-showcase-heading">
           <span>Specialist Care</span> <h2>Advanced Surgical Services</h2>
