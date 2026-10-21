@@ -6,9 +6,19 @@ export default function AuthModal() {
           <i className="fa-solid fa-xmark"></i>
         </button>{' '}
         <div className="auth-logo">
-          <div className="logo-icon">
-            <i className="fa-solid fa-paw"></i>
-          </div>
+         <div className="logo-icon" style={{ overflow: 'hidden', padding: 0 }}>
+  <img
+    src="https://res.cloudinary.com/djaonuvzx/image/upload/v1792352038/WhatsApp_Image_2026-10-19_at_12.29.45_AM-removebg-preview_zaza5i.png"
+    alt="Pawsitive Clinic"
+    style={{
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      borderRadius: '50%',
+      display: 'block'
+    }}
+  />
+</div>
           <div>
             <h2>Pawsitive Clinic</h2> <span>Pets Doctor</span>
           </div>
