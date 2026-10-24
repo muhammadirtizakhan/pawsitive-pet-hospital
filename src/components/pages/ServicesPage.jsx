@@ -10,15 +10,15 @@ export default function ServicesPage({ active = false }) {
             <i className="fa-solid fa-heart-pulse"></i>
             {' Our Services'}
           </div>
-          <h1>
-            {'Veterinary Services in '}
-            <span>Karachi</span>
-            {''}
-          </h1>
-          <p>
-            Visit Pawsitive Clinic in Model Colony, Malir, for treatment, surgery consultations,
-            blood tests and X-ray imaging. Ask Maaz about cat grooming, boarding and appointment availability.
-          </p>
+      <h1>
+  Advanced Veterinary Diagnostics in <span>Karachi</span>
+</h1>
+<p>
+  Advanced diagnostic care is closer than you think.
+  At Pawsitive Clinic, we offer blood tests, laboratory
+  investigations and X-ray imaging at affordable rates,
+  making essential diagnostic care accessible to more pet owners.
+</p>
           <div className="hero-buttons">
             <button className="hero-btn-primary" onClick={() => window.openWhatsAppContact()}>
               <i className="fa-solid fa-phone"></i>
