@@ -377,7 +377,7 @@ export default function HomePage({ active = false }) {
 
           <p className="map-sub">
             Find us at 36/1-1 Sheet 19, Model Colony Block 19, near Malir Cantt
-            Check Post No 2, Karachi 75080. Call +92 334 3601699 for directions
+            Check Post No 2, Karachi 75080. Call +92 371 2699800 for directions
             and current opening hours.
           </p>
         </div>
