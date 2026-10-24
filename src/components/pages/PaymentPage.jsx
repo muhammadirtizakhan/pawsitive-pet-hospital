@@ -117,7 +117,7 @@ export default function PaymentPage({ active = false }) {
                       rel="noopener noreferrer"
                       style={contactStyle}
                     >
-                      +92 334 3601699
+                      +92 371 2699800
                     </a>.
                     Attach the screenshot manually in your WhatsApp
                     conversation.
@@ -203,14 +203,14 @@ export default function PaymentPage({ active = false }) {
                   rel="noopener noreferrer"
                   style={contactStyle}
                 >
-                  WhatsApp: +92 334 3601699
+                  WhatsApp: +92 371 2699800
                 </a>
                 {' '}or{' '}
                 <a
                   href="tel:+923343601699"
                   style={contactStyle}
                 >
-                  call +92 334 3601699
+                  call +92 371 2699800
                 </a>.
                 Share your Order ID and explain your request.
                 Maaz will review it and guide you through the
