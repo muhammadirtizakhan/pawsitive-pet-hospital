@@ -1,7 +1,7 @@
 // Public clinic facts and route content. Keep prices/availability in the database.
 export const CLINIC = {
   name: 'Pawsitive Clinic',
-  phone: '+92 334 3601699',
+  phone: '+92 371 2699800',
   telephone: '+923343601699',
   email: 'maazdvm.262@gmail.com',
   streetAddress: '36/1-1 Sheet 19, near Malir Cantt Check Post No 2, Model Colony Block 19, Malir Cantonment',
@@ -31,9 +31,9 @@ export const productPath = product => `/products/${encodeURIComponent(product.id
 export const plainText = value => String(value || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 
 export const HOME_FAQS = [
-  ['Where is Pawsitive Clinic in Karachi?', 'We are in Model Colony Block 19, near Malir Cantt Check Post No 2, Karachi. Call or WhatsApp +92 334 3601699 for directions and current opening hours.'],
+  ['Where is Pawsitive Clinic in Karachi?', 'We are in Model Colony Block 19, near Malir Cantt Check Post No 2, Karachi. Call or WhatsApp +92 371 2699800 for directions and current opening hours.'],
   ['Which services can I ask about?', 'Contact us for veterinary treatment, surgery consultations, laboratory and blood tests, X-ray imaging, cat grooming, deworming guidance and boarding. Confirm the required service and appointment before visiting.'],
-  ['How do I book cat grooming or boarding?', 'Call or WhatsApp Maaz at +92 334 3601699. Share your cat’s age, health needs and requested grooming service or boarding dates. Confirm availability, preparation requirements and charges with the clinic.'],
+  ['How do I book cat grooming or boarding?', 'Call or WhatsApp Maaz at +92 371 2699800. Share your cat’s age, health needs and requested grooming service or boarding dates. Confirm availability, preparation requirements and charges with the clinic.'],
   ['How do I order cat food in Karachi?', 'Open Shop, select a product and its options, review your cart and complete checkout. Wait for availability confirmation before paying. Follow the Guide for payment proof and order tracking.'],
   ['What should I do if my pet needs urgent care?', 'Contact an available veterinarian immediately for a serious injury or illness. Call the clinic to confirm whether a veterinarian is available; do not assume round-the-clock emergency coverage.']
 ];
