@@ -53,7 +53,7 @@ function codeHash(session, code) {
     .digest('hex');
 }
 
-const phone = '+92 334 3601699';
+const phone = '+92 371 2699800';
 
 const roman = text =>
   /\b(bhai|mera|meri|hai|hain|kya|nahi|kr|karo|batao|aya|aaya|abhi|paisa|kitna)\b/i
