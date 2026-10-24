@@ -32,9 +32,9 @@ const chatbotData = {
       'Model Colony Block 19 Malir Cantonment, ' +
       'Karachi, 75080, Pakistan',
 
-    phone: '+92 334 3601699',
+    phone: '+92 371 2699800',
 
-    whatsapp: '+92 334 3601699',
+    whatsapp: '+92 371 2699800',
 
     email: 'maazdvm.262@gmail.com'
   },
@@ -43,13 +43,13 @@ const chatbotData = {
   // clarification has not yet been supplied.
   hours: [
     'Opening hours have not been confirmed. Call or WhatsApp ' +
-    '+92 334 3601699 before travelling. Do not claim the clinic ' +
+    '+92 371 2699800 before travelling. Do not claim the clinic ' +
     'is open now or provides a 24-hour emergency service.'
   ],
 
   appointments:
     'For treatment, tests, surgery consultations, grooming or boarding ' +
-    'enquiries, call or WhatsApp +92 334 3601699. Share the service needed, ' +
+    'enquiries, call or WhatsApp +92 371 2699800. Share the service needed, ' +
     'pet species, age and any relevant symptoms. The team must confirm ' +
     'availability, charges and preparation. This assistant cannot book ' +
     'a slot, dispatch transport or contact the team on the customer’s ' +
@@ -305,7 +305,7 @@ const chatbotData = {
       a:
         'Pawsitive Clinic: 36/1-1 Sheet 19, near Malir Cantt Check ' +
         'Post No 2, Model Colony Block 19 Malir Cantonment, ' +
-        'Karachi, 75080, Pakistan. Call/WhatsApp +92 334 3601699. ' +
+        'Karachi, 75080, Pakistan. Call/WhatsApp +92 371 2699800. ' +
         'Email maazdvm.262@gmail.com. Do not invent travel times ' +
         'or directions beyond these landmarks.'
     },
@@ -315,7 +315,7 @@ const chatbotData = {
 
       a:
         'Opening hours and round-the-clock emergency staffing are ' +
-        'not confirmed. Call +92 334 3601699. For an urgent animal, ' +
+        'not confirmed. Call +92 371 2699800. For an urgent animal, ' +
         'seek an available emergency veterinarian immediately ' +
         'rather than waiting for this clinic to reply.'
     },
@@ -327,7 +327,7 @@ const chatbotData = {
       a:
         'No confirmed service price list has been supplied. ' +
         'Explain that the team must quote the requested service ' +
-        'and pet requirements; give +92 334 3601699. Never invent ' +
+        'and pet requirements; give +92 371 2699800. Never invent ' +
         'a starting price, discount or package.'
     },
 
@@ -336,7 +336,7 @@ const chatbotData = {
 
       a:
         'I can share the contact and help you identify what to ask, ' +
-        'but cannot confirm a booking. Call/WhatsApp +92 334 3601699 ' +
+        'but cannot confirm a booking. Call/WhatsApp +92 371 2699800 ' +
         'with the service and preferred date. The clinic must ' +
         'confirm the slot.'
     },
@@ -359,7 +359,7 @@ const chatbotData = {
         'diagnose from numbers, photographs or chat. The treating ' +
         'veterinarian should assess the complete report, its ' +
         'reference ranges, symptoms and examination. The clinic ' +
-        'can guide the next step at +92 334 3601699.'
+        'can guide the next step at +92 371 2699800.'
     },
 
     {
@@ -646,7 +646,7 @@ const chatbotData = {
     'veterinary guidance; do not claim a food cures disease.',
 
     'For missing information, acknowledge the specific gap ' +
-    'and offer +92 334 3601699. Avoid a generic refusal when ' +
+    'and offer +92 371 2699800. Avoid a generic refusal when ' +
     'another part of the question can be answered from ' +
     'this knowledge.',
 
@@ -658,7 +658,7 @@ const chatbotData = {
 
   fallbackReply:
     'I do not have confirmed information about that. Please ' +
-    'call or WhatsApp Maaz/the clinic team at +92 334 3601699; ' +
+    'call or WhatsApp Maaz/the clinic team at +92 371 2699800; ' +
     'they can guide you. For an urgent injury or serious ' +
     'illness, seek an available veterinarian immediately.',
 
