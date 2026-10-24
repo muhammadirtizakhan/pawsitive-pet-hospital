@@ -161,7 +161,7 @@ export default function Footer() {
             <li>
               <i className="fa-solid fa-phone"></i>
               <span>
-                <a href="tel:+923343601699">+92 334 3601699</a>
+                <a href="tel:+923343601699">+92 371 2699800</a>
               </span>
             </li>
             <li>
