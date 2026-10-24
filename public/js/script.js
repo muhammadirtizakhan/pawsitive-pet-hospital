@@ -909,7 +909,7 @@ function updatePassword() {
 // FAQ ACCORDION
 // ============================================================
 const faqs = [
-    { question: 'Where is Pawsitive Clinic?', answer: 'Model Colony Block 19, near Malir Cantt Check Post No 2, Karachi. Call +92 334 3601699 to confirm current hours and appointments.' },
+    { question: 'Where is Pawsitive Clinic?', answer: 'Model Colony Block 19, near Malir Cantt Check Post No 2, Karachi. Call +92 371 2699800 to confirm current hours and appointments.' },
     { question: 'Which services can I ask about?', answer: 'Veterinary treatment, surgery consultations, laboratory testing, X-ray, cat grooming and boarding. Confirm availability and charges with the clinic.' },
     { question: 'When should I pay for a shop order?', answer: 'Wait for availability confirmation, then follow the payment instructions. Send payment proof and the order ID to Maaz. Read the Guide for full steps.' }
 ];
