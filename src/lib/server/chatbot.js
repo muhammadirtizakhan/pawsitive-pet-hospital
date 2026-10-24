@@ -4,7 +4,7 @@ import { productContext } from './chatbotProducts';
 
 export const fallbackReply = () =>
   data.fallbackReply ||
-  'Please contact the clinic on +92 334 3601699.';
+  'Please contact the clinic on +92 371 2699800.';
 
 export function cleanMessages(raw) {
   if (!Array.isArray(raw) || raw.length > 100) {
