@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 // Replace this URL with your actual MP4 demo video later.
 const DEMO_VIDEO_URL =
-  'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4';
+  'https://res.cloudinary.com/djaonuvzx/video/upload/v1792626254/pets_hospital_jpj4e4.mp4';
 
 // Set this to false after adding your actual website tutorial.
 const DEMO_IS_SAMPLE = true;
@@ -392,17 +392,18 @@ export default function GuidePage({ active = false }) {
           <section className="pg-section">
             <div className="pg-support">
               <div>
-                <span className="pg-eyebrow">A PERSON TO HELP YOU</span>
-                <h2>Speak to Maaz</h2>
+                <span className="pg-eyebrow">WE’RE HERE TO HELP</span>
+                <h2>Contact Us</h2>
                 <p className="pg-support-role">
                   Clinic Administrator · +92 334 3601699
                 </p>
 
                 <p className="pg-copy">
-                  For payment questions, missing deliveries,
-                  cancellation or refund requests, contact Maaz
-                  directly. Include your Order ID and explain
-                  what you need help with.
+            <p className="pg-copy">
+  For payment enquiries, order updates, cancellations or
+  refund requests, contact our clinic team. Please include
+  your Order ID so we can assist you.
+</p>
                 </p>
 
                 <div className="pg-actions">
@@ -413,7 +414,7 @@ export default function GuidePage({ active = false }) {
                     rel="noopener noreferrer"
                   >
                     <i className="fa-brands fa-whatsapp"></i>
-                    WhatsApp Maaz
+                    WhatsApp here
                   </a>
 
                   <a
@@ -432,10 +433,9 @@ export default function GuidePage({ active = false }) {
                 </span>
                 <h3>Refunds &amp; cancellations</h3>
                 <p>
-                  Requests are reviewed directly by Maaz.
-                  Contacting the clinic does not automatically
-                  cancel an order or guarantee a refund.
-                  The team will explain the applicable next steps.
+          Cancellation and refund requests are reviewed by our clinic team.
+Submitting a request does not automatically cancel your order
+or confirm a refund. Our team will guide you through the next steps.
                 </p>
               </aside>
             </div>
