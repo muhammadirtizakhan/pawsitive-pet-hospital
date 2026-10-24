@@ -62,7 +62,7 @@ const paymentSteps = [
   {
     title: 'Send your screenshot',
     text:
-      'After paying, WhatsApp a clear payment screenshot and your Order ID to Maaz at +92 334 3601699. Attach the screenshot manually.'
+      'After paying, WhatsApp a clear payment screenshot and your Order ID to Maaz at +92 371 2699800. Attach the screenshot manually.'
   },
   {
     title: 'Allow time for verification',
@@ -85,7 +85,7 @@ const faqs = [
   {
     question: 'Where do I send my payment screenshot?',
     answer:
-      'Send it to Maaz, Clinic Administrator, on WhatsApp at +92 334 3601699. Include your Order ID so the payment can be matched to your order.'
+      'Send it to Maaz, Clinic Administrator, on WhatsApp at +92 371 2699800. Include your Order ID so the payment can be matched to your order.'
   },
   {
     question: 'I paid, but my status has not changed. What should I do?',
@@ -110,7 +110,7 @@ const faqs = [
   {
     question: 'How do I request cancellation or a refund?',
     answer:
-      'Contact Maaz directly on +92 334 3601699 with your Order ID and request. He will review it and explain the applicable process. A request does not automatically cancel the order or issue a refund.'
+      'Contact Maaz directly on +92 371 2699800 with your Order ID and request. He will review it and explain the applicable process. A request does not automatically cancel the order or issue a refund.'
   },
   {
     question: 'Can the chatbot book an appointment or diagnose my pet?',
@@ -395,7 +395,7 @@ export default function GuidePage({ active = false }) {
                 <span className="pg-eyebrow">WE’RE HERE TO HELP</span>
                 <h2>Contact Us</h2>
                 <p className="pg-support-role">
-                  Clinic Administrator · +92 334 3601699
+                  Clinic Administrator · +92 371 2699800
                 </p>
 
                 <p className="pg-copy">
