@@ -2,11 +2,9 @@
 
 import { useState } from 'react';
 
-// Replace this URL with your actual MP4 demo video later.
 const DEMO_VIDEO_URL =
   'https://res.cloudinary.com/djaonuvzx/video/upload/v1792626254/pets_hospital_jpj4e4.mp4';
 
-// Set this to false after adding your actual website tutorial.
 const DEMO_IS_SAMPLE = true;
 
 const steps = [
@@ -394,35 +392,26 @@ export default function GuidePage({ active = false }) {
               <div>
                 <span className="pg-eyebrow">WE’RE HERE TO HELP</span>
                 <h2>Contact Us</h2>
+
                 <p className="pg-support-role">
                   Clinic Administrator · +92 371 2699800
                 </p>
 
                 <p className="pg-copy">
-            <p className="pg-copy">
-  For payment enquiries, order updates, cancellations or
-  refund requests, contact our clinic team. Please include
-  your Order ID so we can assist you.
-</p>
+                  For payment enquiries, order updates, cancellations or
+                  refund requests, contact our clinic team. Please include
+                  your Order ID so we can assist you.
                 </p>
 
                 <div className="pg-actions">
                   <a
                     className="pg-button pg-primary"
-                    href="https://wa.me/923343601699"
+                    href="https://wa.me/923712699800"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <i className="fa-brands fa-whatsapp"></i>
                     WhatsApp here
-                  </a>
-
-                  <a
-                    className="pg-button pg-secondary"
-                    href="tel:+923343601699"
-                  >
-                    <i className="fa-solid fa-phone"></i>
-                    Call Maaz
                   </a>
                 </div>
               </div>
@@ -433,9 +422,9 @@ export default function GuidePage({ active = false }) {
                 </span>
                 <h3>Refunds &amp; cancellations</h3>
                 <p>
-          Cancellation and refund requests are reviewed by our clinic team.
-Submitting a request does not automatically cancel your order
-or confirm a refund. Our team will guide you through the next steps.
+                  Cancellation and refund requests are reviewed by our clinic team.
+                  Submitting a request does not automatically cancel your order
+                  or confirm a refund. Our team will guide you through the next steps.
                 </p>
               </aside>
             </div>
@@ -972,30 +961,30 @@ or confirm a refund. Our team will guide you through the next steps.
             gap: 12px;
           }
         }
-.pg-guide .pg-hero {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-}
 
-.pg-guide .pg-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image:
+        .pg-guide .pg-hero {
+          position: relative;
+          isolation: isolate;
+          overflow: hidden;
+        }
 
-linear-gradient(
-  90deg,
-  rgba(255, 250, 244, 0.65) 0%,
-  rgba(255, 250, 244, 0.40) 48%,
-  rgba(255, 250, 244, 0.08) 100%
-),
+        .pg-guide .pg-hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          background-image:
+            linear-gradient(
+              90deg,
+              rgba(255, 250, 244, 0.65) 0%,
+              rgba(255, 250, 244, 0.40) 48%,
+              rgba(255, 250, 244, 0.08) 100%
+            ),
+            url("https://images.pexels.com/photos/6816859/pexels-photo-6816859.jpeg?auto=compress&cs=tinysrgb&w=1600");
+          background-size: cover;
+          background-position: center, center 42%;
+        }
 
-    url("https://images.pexels.com/photos/6816859/pexels-photo-6816859.jpeg?auto=compress&cs=tinysrgb&w=1600");
-  background-size: cover;
-  background-position: center, center 42%;
-}
         @media (prefers-reduced-motion: reduce) {
           .pg-button {
             transition: none;
